@@ -43,16 +43,16 @@ namespace PruebaExamen00
 
         private void AplicarModoClaro()
         {
-            Application.Current.Resources["PrimaryBrush"] = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#F5F5F5")); // Fondo general
-            Application.Current.Resources["SecondaryBrush"] = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#E0E0E0")); // Paneles secundarios
-            Application.Current.Resources["TextBrush"] = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#1565C0")); // Texto en azul oscuro
+            Application.Current.Resources["PrimaryBrush"] = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#F5F5F5"));
+            Application.Current.Resources["SecondaryBrush"] = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#E0E0E0"));
+            Application.Current.Resources["TextBrush"] = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#1565C0"));
         }
 
         private void AplicarModoOscuro()
         {
-            Application.Current.Resources["PrimaryBrush"] = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#121212")); // Fondo general
-            Application.Current.Resources["SecondaryBrush"] = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#1E1E1E")); // Paneles secundarios
-            Application.Current.Resources["TextBrush"] = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#00E676")); // Texto en verde neón
+            Application.Current.Resources["PrimaryBrush"] = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#121212"));
+            Application.Current.Resources["SecondaryBrush"] = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#1E1E1E"));
+            Application.Current.Resources["TextBrush"] = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#00E676"));
         }
     }
 }
