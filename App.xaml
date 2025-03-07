@@ -5,7 +5,7 @@
     xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
     xmlns:local="clr-namespace:PruebaExamen00"
     StartupUri="MainWindow.xaml"
-    >
+>
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -31,6 +31,32 @@
             <Style TargetType="{x:Type TextBlock}" x:Key="MaterialDesignTextBlock">
                 <Setter Property="Foreground" Value="Lime" />
                 <Setter Property="TextWrapping" Value="Wrap" />
+            </Style>
+
+            <Style TargetType="ToggleButton" x:Key="MaterialDesignToggleButton">
+                <Setter Property="Foreground" Value="{DynamicResource TextBrush}"/>
+                <Setter Property="Background" Value="{DynamicResource SecondaryBrush}"/>
+                <Setter Property="BorderBrush" Value="Transparent"/>
+                <Setter Property="Padding" Value="0"/>
+                <Setter Property="MinWidth" Value="30"/>
+                <Setter Property="MinHeight" Value="30"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="ToggleButton">
+                            <Border Background="{TemplateBinding Background}"
+                        CornerRadius="4"
+                        Padding="2" 
+                        Width="30" 
+                        Height="30"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center">
+                                <Viewbox Width="16" Height="16">
+                                    <materialDesign:PackIcon x:Name="ModeIcon" Kind="ThemeLightDark"/>
+                                </Viewbox>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
             </Style>
 
         </ResourceDictionary>

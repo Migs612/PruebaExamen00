@@ -17,15 +17,42 @@ using System.Windows.Shapes;
 
 namespace PruebaExamen00
 {
-    /// <summary>
-    /// Lógica de interacción para MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
+        private bool modoOscuro = true;
+
         public MainWindow()
         {
             InitializeComponent();
+            AplicarModoClaro();
         }
 
+        private void ToggleMode_Click(object sender, RoutedEventArgs e)
+        {
+            if (modoOscuro)
+            {
+                AplicarModoClaro();
+            }
+            else
+            {
+                AplicarModoOscuro();
+            }
+
+            modoOscuro = !modoOscuro;
+        }
+
+        private void AplicarModoClaro()
+        {
+            Application.Current.Resources["PrimaryBrush"] = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#F5F5F5")); // Fondo general
+            Application.Current.Resources["SecondaryBrush"] = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#E0E0E0")); // Paneles secundarios
+            Application.Current.Resources["TextBrush"] = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#1565C0")); // Texto en azul oscuro
+        }
+
+        private void AplicarModoOscuro()
+        {
+            Application.Current.Resources["PrimaryBrush"] = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#121212")); // Fondo general
+            Application.Current.Resources["SecondaryBrush"] = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#1E1E1E")); // Paneles secundarios
+            Application.Current.Resources["TextBrush"] = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#00E676")); // Texto en verde neón
+        }
     }
 }

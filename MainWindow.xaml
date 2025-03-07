@@ -6,68 +6,93 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:PruebaExamen00"
         mc:Ignorable="d"
+        ResizeMode="NoResize"
         Style="{StaticResource MaterialDesignWindow}"
-        Title="LinkiaGram by Metalex84" Height="600" Width="300"
-        >
+        Title="LinkiaGram by Manuel" Height="600" Width="300"
+        Background="{DynamicResource PrimaryBrush}">
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="0.15*"/>
             <RowDefinition Height="0.85*"/>
         </Grid.RowDefinitions>
 
-        <StackPanel Orientation="Vertical" Grid.Row="0" Background="Black">
+        <StackPanel Orientation="Vertical" Grid.Row="0" Background="{DynamicResource PrimaryBrush}">
             <UniformGrid Columns="2">
-                <TextBlock Text="LinkiaGram" HorizontalAlignment="Center"  VerticalAlignment="Center" Padding="10" Style="{StaticResource MaterialDesignSubtitle1TextBlock}" FontWeight="Bold"/>
-                <Button x:Name="ToggleMode" Cursor="Hand" Style="{StaticResource MaterialDesignFlatButton}">
-                    <materialDesign:PackIcon Kind="Lightbulb"/>
-                </Button>
+                <TextBlock Text="LinkiaGram" HorizontalAlignment="Center" VerticalAlignment="Center"
+                           Padding="10" Style="{StaticResource MaterialDesignSubtitle1TextBlock}" 
+                           FontWeight="Bold" Foreground="{DynamicResource TextBrush}"/>
+
+                <ToggleButton x:Name="ToggleMode" Cursor="Hand"
+              Style="{StaticResource MaterialDesignToggleButton}"
+              Click="ToggleMode_Click"/>
+
             </UniformGrid>
-            <UniformGrid Background="Black" Grid.Row="1" Columns="4">
-                <Button Style="{StaticResource MaterialDesignFlatButton}" Margin="10">
+
+            <UniformGrid Background="{DynamicResource PrimaryBrush}" Grid.Row="1" Columns="4">
+                <Button Style="{StaticResource MaterialDesignFlatButton}" Margin="10" 
+                        Background="{DynamicResource SecondaryBrush}" Foreground="{DynamicResource TextBrush}">
                     <materialDesign:PackIcon Kind="Home"/>
                 </Button>
-                <Button Style="{StaticResource MaterialDesignFlatButton}" Margin="10">
+                <Button Style="{StaticResource MaterialDesignFlatButton}" Margin="10" 
+                        Background="{DynamicResource SecondaryBrush}" Foreground="{DynamicResource TextBrush}">
                     <materialDesign:PackIcon Kind="Search"/>
                 </Button>
-                <Button Style="{StaticResource MaterialDesignFlatButton}" Margin="10">
+                <Button Style="{StaticResource MaterialDesignFlatButton}" Margin="10" 
+                        Background="{DynamicResource SecondaryBrush}" Foreground="{DynamicResource TextBrush}">
                     <materialDesign:PackIcon Kind="Explore"/>
                 </Button>
-                <Button Style="{StaticResource MaterialDesignFlatButton}" Margin="10" Cursor="Hand">
+                <Button Style="{StaticResource MaterialDesignFlatButton}" Margin="10" Cursor="Hand"
+                        Background="{DynamicResource SecondaryBrush}" Foreground="{DynamicResource TextBrush}">
                     <materialDesign:PackIcon Kind="Menu"/>
                 </Button>
             </UniformGrid>
         </StackPanel>
+
         <ScrollViewer Grid.Row="1">
-            <StackPanel Background="Black">
+            <StackPanel Background="{DynamicResource PrimaryBrush}">
 
-                <Border Margin="10" Padding="10" CornerRadius="5">
+                <Border Margin="10" Padding="10" CornerRadius="5" Background="{DynamicResource SecondaryBrush}">
                     <StackPanel>
-                        <TextBlock Text="Vaga98" Style="{StaticResource MaterialDesignCaptionTextBlock}"/>
-                        <Image Source="friends.png" Height="200" Stretch="UniformToFill"/>
-                        <TextBlock Text="Fue un viaje irrepetible. ¿Volvemos este verano?" Style="{StaticResource MaterialDesignTextBlock}"/>
-                    </StackPanel>
-                </Border>
-                <Border Margin="10" Padding="10" CornerRadius="5">
-                    <StackPanel>
-                        <TextBlock Text="Cateto21" Style="{StaticResource MaterialDesignCaptionTextBlock}"/>
-                        <Image Source="work.png" Height="200" Stretch="UniformToFill"/>
-                        <TextBlock Text="Primer día de prácticas. Esto se me está haciendo eterno..." Style="{StaticResource MaterialDesignTextBlock}"/>
+                        <TextBlock Text="Motorhead" Style="{StaticResource MaterialDesignCaptionTextBlock}" 
+                                   Foreground="{DynamicResource TextBrush}"/>
+                        <Image Source="Motorhead.png" Height="200" Stretch="UniformToFill"/>
+                        <TextBlock Text="Banda icónica de heavy metal liderada por Lemmy Kilmister, famosa por su estilo agresivo y canciones como Ace of Spades." 
+                                   Style="{StaticResource MaterialDesignTextBlock}" 
+                                   Foreground="{DynamicResource TextBrush}"/>
                     </StackPanel>
                 </Border>
 
-                <Border Margin="10" Padding="10" CornerRadius="5">
+                <Border Margin="10" Padding="10" CornerRadius="5" Background="{DynamicResource SecondaryBrush}">
                     <StackPanel>
-                        <TextBlock Text="Hormonauta23" Style="{StaticResource MaterialDesignCaptionTextBlock}"/>
-                        <Image Source="gym.png" Height="200" Stretch="UniformToFill"/>
-                        <TextBlock Text="No pain, no gain." Style="{StaticResource MaterialDesignTextBlock}"/>
+                        <TextBlock Text="ArticMonkeys" Style="{StaticResource MaterialDesignCaptionTextBlock}" 
+                                   Foreground="{DynamicResource TextBrush}"/>
+                        <Image Source="/ArticMonkeys.png" Height="200" Stretch="UniformToFill"/>
+                        <TextBlock Text="Grupo británico de indie rock conocido por su evolución musical y éxitos como Do I Wanna Know?." 
+                                   Style="{StaticResource MaterialDesignTextBlock}" 
+                                   Foreground="{DynamicResource TextBrush}"/>
                     </StackPanel>
                 </Border>
 
-                <Border Margin="10" Padding="10" CornerRadius="5">
+                <Border Margin="10" Padding="10" CornerRadius="5" Background="{DynamicResource SecondaryBrush}">
                     <StackPanel>
-                        <TextBlock Text="Sara_ndonga" Style="{StaticResource MaterialDesignCaptionTextBlock}"/>
-                        <Image Source="exams.png" Height="200" Stretch="UniformToFill"/>
-                        <TextBlock Text="Último examen del curso. ¿Aprobaré?" Style="{StaticResource MaterialDesignTextBlock}"/>
+                        <TextBlock Text="MiguelBose" Style="{StaticResource MaterialDesignCaptionTextBlock}" 
+                                   Foreground="{DynamicResource TextBrush}"/>
+                        <Image Source="/MiguelBose.png" Height="200" Stretch="UniformToFill"/>
+                        <TextBlock Text="Cantante español con una carrera versátil, destacando en el pop latino con hits como Amante Bandido." 
+                                   Style="{StaticResource MaterialDesignTextBlock}" 
+                                   Foreground="{DynamicResource TextBrush}"/>
+                    </StackPanel>
+                </Border>
+
+                <Border Margin="10" Padding="10" CornerRadius="5" Background="{DynamicResource SecondaryBrush}">
+                    <StackPanel>
+                        <TextBlock Text="Childish Gambino" Style="{StaticResource MaterialDesignCaptionTextBlock}" 
+                                   Foreground="{DynamicResource TextBrush}"/>
+                        <Image Source="/redbone.png" Height="200" Stretch="UniformToFill"/>
+                        <TextBlock Text="Proyecto musical de Donald Glover, combinando rap, funk y soul en temas como Redbone." 
+                                   Style="{StaticResource MaterialDesignTextBlock}" 
+                                   Foreground="{DynamicResource TextBrush}"/>
                     </StackPanel>
                 </Border>
             </StackPanel>
